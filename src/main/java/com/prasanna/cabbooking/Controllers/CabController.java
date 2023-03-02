@@ -12,11 +12,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("api/cab/")
+@RestController
+@RequestMapping("api/cab/")
 public class CabController {
 
-
     CabsManager cabManger;
+
     TripManager tripManager;
 
     public CabController(CabsManager cabManger, TripManager tripManager) {

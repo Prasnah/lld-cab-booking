@@ -19,13 +19,19 @@ import com.prasanna.cabbooking.strategy.PriceStratergy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(classes = LldCabbookingApplication.class)
+@EnableConfigurationProperties
 class LldCabbookingApplicationTests {
+
     CabController cabController;
+
     RiderController riderController;
+
     TripController tripController;
 
     @BeforeEach

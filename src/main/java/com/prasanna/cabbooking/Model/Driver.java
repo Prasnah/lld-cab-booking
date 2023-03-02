@@ -1,6 +1,5 @@
 package com.prasanna.cabbooking.Model;
 
-
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

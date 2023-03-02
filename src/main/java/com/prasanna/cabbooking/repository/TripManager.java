@@ -19,13 +19,16 @@ import java.util.stream.Collectors;
 @Repository
 public class TripManager {
     Map<String, List<Trip>> tripRepo = new HashMap<>();
+    @Autowired
     private CabsManager cabsManager;
+    @Autowired
     private RiderManger riderManger;
 
     private static final Double MAX_DISTANCE_TO_PICKUP = 10.0;
     private CabMatchingStrategy cabMatchingStrategy;
     private PriceStratergy priceStratergy;
 
+    @Autowired
     public TripManager(CabsManager cabsManager, RiderManger riderManger, CabMatchingStrategy cabMatchingStrategy, PriceStratergy priceStratergy) {
         this.cabsManager = cabsManager;
         this.riderManger = riderManger;
